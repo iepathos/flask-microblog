@@ -1,0 +1,216 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2013 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-09-21 12:26-0700\n"
+"PO-Revision-Date: 2013-09-20 23:04-0800\n"
+"Last-Translator: Glen Baker <iepathos@gmail.com>\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: app/__init__.py:22
+msgid "Please log in to access this page."
+msgstr "Por favor regístrate para acceder a esta página."
+
+#: app/forms.py:27
+msgid ""
+"This nickname has invalid characters. Please use letters, numbers, dots "
+"and underscores only."
+msgstr ""
+"Este nombre de usuario tiene caracteres inválidos. Por favor usa letras, "
+"números, puntos y underscores."
+
+#: app/forms.py:31
+msgid "This nickname is already in use. Please choose another one."
+msgstr "Este nombre de usuario ya esta usado. Por favor elije otro."
+
+#: app/views.py:33
+msgid "Your post is now live!"
+msgstr "¡Tu artículo ha sido publicado!"
+
+#: app/views.py:37 app/templates/base.html:56
+msgid "Home"
+msgstr "Inicio"
+
+#: app/views.py:56 app/templates/login.html:45
+msgid "Sign In"
+msgstr "Ingresar"
+
+#: app/views.py:63
+msgid "Invalid login. Please try again."
+msgstr "Credenciales inválidas. Por favor intenta de nuevo."
+
+#: app/views.py:107
+#, python-format
+msgid "User %(nickname)s was not found."
+msgstr "El usuario %(nickname)s no existe."
+
+#: app/views.py:124
+msgid "Your changes have been saved."
+msgstr "Tus cambios han sido guardados."
+
+#: app/views.py:139 app/views.py:159
+#, python-format
+msgid "User %(nickname)s not found."
+msgstr "El usuario %(nickname)s no existe."
+
+#: app/views.py:142
+msgid "You can't follow yourself!"
+msgstr "¡No te puedes seguir a tí mismo!"
+
+#: app/views.py:146
+#, python-format
+msgid "Cannot follow %(nickname)s."
+msgstr "No se pudo seguir a %(nickname)s."
+
+#: app/views.py:150
+#, python-format
+msgid "You are now following %(nickname)s!"
+msgstr "¡Ya estás siguiendo a %(nickname)s!"
+
+#: app/views.py:162
+msgid "You can't unfollow yourself!"
+msgstr "¡No te puedes dejar de seguir a tí mismo!"
+
+#: app/views.py:166
+#, python-format
+msgid "Cannot unfollow %(nickname)s."
+msgstr "No se pudo dejar de seguir a %(nickname)s."
+
+#: app/views.py:170
+#, python-format
+msgid "You have stopped following %(nickname)s."
+msgstr "Ya no sigues más a %(nickname)s."
+
+#: app/templates/404.html:4
+msgid "File Not Found"
+msgstr "Archivo no encontrado"
+
+#: app/templates/404.html:5 app/templates/500.html:6
+msgid "Back"
+msgstr "Volver"
+
+#: app/templates/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "Un error inesperado ha ocurrido"
+
+#: app/templates/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "El administrador ha sido notificado. ¡Lo lamento!"
+
+#: app/templates/_post.html:8
+#, python-format
+msgid "%(nickname)s said %(when)s:"
+msgstr "%(nickname)s dijo %(when)s:"
+
+#: app/templates/base.html:58
+msgid "Your Profile"
+msgstr "Tu Perfil"
+
+#: app/templates/base.html:59
+msgid "Logout"
+msgstr "Desconectarse"
+
+#: app/templates/base.html:65
+msgid "Search Posts"
+msgstr "Buscar Publicaras"
+
+#: app/templates/edit.html:4
+msgid "Edit Your Profile"
+msgstr "Editar Tu Perfil"
+
+#: app/templates/edit.html:9
+msgid "Your nickname"
+msgstr "Tu nombre de usuario"
+
+#: app/templates/edit.html:19
+msgid "About yourself"
+msgstr "Acerca tuyo"
+
+#: app/templates/edit.html:29
+msgid "Save Changes"
+msgstr "Guardar"
+
+#: app/templates/follower_email.html:2
+msgid "is now a follower"
+msgstr "te está siguiendo."
+
+#: app/templates/follower_email.html:12
+msgid "Regards"
+msgstr "Cordialmente"
+
+#: app/templates/index.html:11
+msgid "Get bloggin'"
+msgstr "Dí algo"
+
+#: app/templates/index.html:14
+msgid "Say something"
+msgstr "Dí algo"
+
+#: app/templates/index.html:23
+msgid "Post"
+msgstr "¡Publicar!"
+
+#: app/templates/index.html:34 app/templates/index.html:36
+#: app/templates/user.html:33 app/templates/user.html:35
+msgid "Newer posts"
+msgstr "Artículos nuevos"
+
+#: app/templates/index.html:39 app/templates/index.html:41
+#: app/templates/user.html:38 app/templates/user.html:40
+msgid "Older posts"
+msgstr "Artículos viejos"
+
+#: app/templates/login.html:18
+msgid "Please Sign In"
+msgstr "Por Favor Regístrate"
+
+#: app/templates/login.html:21
+msgid "Click on your OpenID provider below"
+msgstr "Haz click en tu proveedor de OpenID"
+
+#: app/templates/login.html:28
+msgid "Or enter your OpenID here"
+msgstr "O ingresa tu OpenID aquí"
+
+#: app/templates/login.html:39
+msgid "Remember Me"
+msgstr "Recordarme"
+
+#: app/templates/search_results.html:4
+msgid "Search results for"
+msgstr "Resultados de búsqueda de"
+
+#: app/templates/user.html:11
+msgid "User"
+msgstr "Usario"
+
+#: app/templates/user.html:13
+msgid "Last seen"
+msgstr "Último acceso"
+
+#: app/templates/user.html:14
+msgid "followers"
+msgstr "seguidores"
+
+#: app/templates/user.html:16
+msgid "Edit your profile"
+msgstr "Editar Tu Perfil"
+
+#: app/templates/user.html:18
+msgid "Follow"
+msgstr "Seguir"
+
+#: app/templates/user.html:20
+msgid "Unfollow"
+msgstr "Dejar de seguir"
+

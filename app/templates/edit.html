@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ _('Edit Your Profile') }}</h1>
+<div class="well">
+    <form class="form-horizontal" action="" method="post" name="edit">
+        {{form.hidden_tag()}}
+        <div class="form-group{% if form.errors.post %} has-error{% endif %}">
+            <label class="control-label" for="nickname">{{ _('Your nickname') }}:</label>
+            <div class="controls">
+                {{ form.nickname(maxlength = 64, class = "form-control") }}
+                {% for error in form.errors.nickname %}
+                    <span class="help-block has-error">[{{error}}]</span><br>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="form-group{% if form.errors.post %} has-error{% endif %}">
+            <label class="control-label" for="about_me">{{ _('About yourself') }}:</label>
+            <div class="controls">
+                {{ form.about_me(cols = 64, rows = 4, class = "form-control") }}
+                {% for error in form.errors.about_me %}
+                    <span class="help-block has-error">[{{error}}]</span><br>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="controls">
+                <input class="btn btn-primary" type="submit" value="{{ _('Save Changes') }}">
+            </div>
+        </div>
+    </form>
+</div>
+</form>
+{% endblock %}

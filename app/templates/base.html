@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    {% if title %}
+      <title>{{title}} - Glen's microblog</title>
+    {% else %}
+      <title>Glen's microblog</title>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block css %}
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+
+
+      <link rel="stylesheet" href="/static/css/base_style.css">
+
+
+    {% endblock %}
+
+    {% block js %}
+      <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+      {% if g.locale == 'en' %}
+      <script src="/static/js/moment.min.js"></script>
+      {% else %}
+        <script src="/static/js/moment+langs.min.js"></script>
+        <script type='text/javascript'>
+          moment.lang('{{ g.locale }}')
+        </script>
+      {% endif %}
+    {% endblock %}
+
+    {% block extra_head %}{% endblock %}
+
+  </head>
+  <body>
+      <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ url_for('index') }}">Glen's microblog</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              <li><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
+              {% if g.user.is_authenticated() %}
+              <li><a href="{{ url_for('user', nickname = g.user.nickname) }}">{{ _('Your Profile') }}</a></li>
+              <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
+              {% endif %}    
+            </ul>
+            {% if g.user.is_authenticated() %}
+              <form class="navbar-form navbar-right" action="{{url_for('search')}}" method="post" name="search">
+                <div class='form-group'>
+                  {{ g.search_form.hidden_tag() }}{{ g.search_form.search(placeholder=_('Search Posts'), class="form-control") }}
+                </div>
+              </form>
+            {% endif %}
+          </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
+
+    <div class="container">
+      <div class='row'>
+        {% include 'flash.html' %}
+      </div>
+      <div class="row">
+          {% block content %}{% endblock %}
+      </div>
+    </div><!-- /.container -->
+
+    <footer>
+      <hr>
+      <p>&copy; Glen Baker 2013</p>
+    </footer>
+
+
+
+  </body>
+</html>
